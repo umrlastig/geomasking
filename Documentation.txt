@@ -1,0 +1,16 @@
+Bienvenue sur cette documentation des trois méthodes d'anonymisation étudiées dans le cadre
+de mon stage au sein du projet Covizu:
+
+Dans chacun des dossiers, vous trouverez les scripts de ces méthodes d'anonymisation, ainsi que les 
+scripts des méthodes d'évaluation de ces méthodes d'anonymisation. En plus de ces scripts, vous trouverez 
+les jeux de données au format CSV de base qui ont été anonymisées ou ont servi pour l'anonymisation. Dans le 
+dossier résultat, vous trouverez les jeux de données anonymisées, les résultats de k-anonymité et de clusterisation
+
+Vous trouverez une documentation pour chacune des méthodes, avec le formalisme des données, comment préparer 
+de nouvelles données pour de nouveaux tests etc...
+
+De plus vous trouverez un dump à restaurer de la bano dans les départements des Yvelines et de Paris, nécessaires 
+pour les algorithmes de calcul de la k-anonymité des jeux de données.
+
+Chacun de ces algorithmes lit des fichiers CSV grâce au module CSV, il convient donc pour faire tourner correment l'algorithme 
+d'indiquer les bons chemins en début d'algorithmes vers les fichiers CSV concernés. 

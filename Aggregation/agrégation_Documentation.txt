@@ -1,0 +1,15 @@
+Liste des algorithmes:
+AgregationV2: algorithme permettant de réaliser l'agrégation sur les centroides de l'unité spatiale choisie
+ordreID:Algorithme permettant de remettre en ordre les données agrégées par ordre croissant d'id(étape essentielle à réaliser avant de calculer la k-anonymité)
+kano_agregationV2: Algorithme permettant de calculer la k-anonymité de la base de données agrégées
+stat_densité: algorithme permettant de calculer les statistiques d'un attribut comme la k_anonymité d'un jeu de données
+scan_detec_cluster: algorithme permettant de detecter les clusters formés par un jeu de données spatiales
+compar_clusterVAG: algorithme permettant de comparer les clusters formés par deux jeux de données du point de vue des points
+V2_compar_cluster: algorithme permettant de comparer les clusters formés par deux jeux de données 
+identification: algorithme permettant d'ajouter un identifiant à chaque point d'un jeu de données(essentiel à faire si on recrée une unité spatiale sur laquelle on souhaite agréger)
+
+Vous disposez comme unité spatiale sur lesquelles agréger: des iris, du graphe routier(en plusieurs versions où on a retiré plus ou moins de petits polygones), des bâtiments regroupés avec
+des zones tampons variées
+
+Pour créer une nouvelle unité spatiale, il faudra dans QGIS, charger la couche des polygones, en extraire les centroides, calculer leur coordonnées en lambert 93,
+exporter la couche en CSV, et finalement faire tourner l'algorithme identification.py pour ajouter des identifiants à chaque centroide, pour pouvoir passer à l'agrégation.

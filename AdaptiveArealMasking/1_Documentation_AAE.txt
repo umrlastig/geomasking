@@ -1,0 +1,1 @@
+This folder contains the implementation of the Adaptive Areal Elimination proposed by Kounadi & Leitner (2016) 10.1016/j.compenvurbsys.2016.01.004

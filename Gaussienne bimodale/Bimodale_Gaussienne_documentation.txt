@@ -1,0 +1,15 @@
+Liste des algorithmes:
+Gaussienne bimodale: version de base de l'anonymisation par gaussienne bimodale
+Gaussienne_bimodaleV2: version de l'anonymisation par gaussienne bimodale prenant en compte la densité
+Gaussienne_bimodaleV3: version de l'anonymisation par gaussienne bimodale déplaçant par 3 fois le point plus loin pour obtenir une meilleure k-anonymité
+Gaussienne_bimodaleV4: version de l'anonymisation par gaussienne bimodale privilégiant la direction de déplaçant donnant la meilleure k-anonymité
+paris_densite_adresse: algorithme permettant de calculer la densité associée à chaque point du jeu de données à anonymisées dans Paris
+yvelines_densite_adresse: algorithme permettant de calculer la densité associée à chaque point du jeu de données à anonymisées dans Yvelines
+evaluation_ano: Algorithme permettant de calculer la k-anonymité de la base de données agrégées
+triang_delaunay_comparator: algorithme permettant de comparer les triangulations de delaunay de deux jeux de données
+scan_detec_cluster: algorithme permettant de detecter les clusters formés par un jeu de données spatiales
+V2_compar_cluster: algorithme permettant de comparer les clusters formés par deux jeux de données
+
+Pour la triangulation de Delaunay d'une nouvelle base de données anonymisées ou non anonymisées, il faudra la calculer dans QGIS
+en utilisant l'outil Triangulation de Delaunay, il est important que les jeux de données soient bien rangés dans le même ordre par identifiant
+afin que les sommets numérotés dans la triangulation de Delaunay correspondent bien aux mêmes points et que les deux triangulations soient comparables.

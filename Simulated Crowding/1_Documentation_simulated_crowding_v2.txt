@@ -1,0 +1,14 @@
+List of the functions:
+scan_detec_cluster: algorithm that detects the point clusters where the simulated crowding will be applied. DBSCAN is used.
+count_clusters: algorithms that creates a CSV file with a list of points included in each cluster; this CSV is necessary for the anonymisation algorithms.
+simulated_crowdingV2: second version of the simulated crowding algorithm, where the generated points can be close to the real points.
+simulated_crowdingV2_roads: this alternative version of the algorithm snaps the generated points along the roads to look like real points.
+kano_crowdingV3: Algorithm that computes k-anonymité according to the number of points in the cluster.
+stat_densité: algorithm to compute the statistics (including k-anonymity) of a dataset.
+
+Pour faire tourner la méthode sur une nouvelle base de données non anonymisées, une fois detecter les clusters formés par la base de données non-anonymisées, 
+il faut se rendre sur QGIS, on utilise l'outil enveloppe concave(plus proche voisin) sur l'attribut labels, dans la couche d'enveloppe concave, on supprime l'enveloppe 
+correspondant aux points du bruit dont la valeur de labels est -1. Pour chaque enveloppe de cluster, on extrait les sommets, on calcule leur coordonnées en lambert 93,
+qu'on va exporter sous forme de fichier CSV. Si on souhaite former des zones tampons interdites, où on ne souhaite pas que les points se disposent après simulated
+crowding, on utilise l'outil tampon sur la base de données avec le rayon de zone tampon souhaité. Et de même que pour l'enveloppe concave, on extraie les 
+sommets, calcule leurs coordonnées en lambert 93 et exporte la couche en fichier CSV.
